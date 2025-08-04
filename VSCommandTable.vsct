@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Include href="KnownImageIds.vsct"/>
+	<Include href="VSGlobals.vsct"/>
+
+	<Commands package="MakefileReader">
+		<Groups>
+			<!-- Group for context menu on Makefile files -->
+			<Group guid="MakefileReader" id="Edit_Makefile_Group" priority="0x0100">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<!-- Button to open Makefile tool window in View > Other Windows -->
+			<Button guid="MakefileReader" id="View_OtherWindows_Makefile_Button_0" priority="0x0900" type="Button">
+				<Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
+				<Icon guid="ImageCatalogGuid" id="DocumentOutline"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Makefile</ButtonText>
+					<ToolTipText>Open Makefile Reader Window</ToolTipText>
+				</Strings>
+			</Button>
+
+			<!-- Button for context menu preview on any file -->
+			<Button guid="MakefileReader" id="Edit_Makefile_Button_0" priority="0x0100" type="Button">
+				<Parent guid="MakefileReader" id="Edit_Makefile_Group"/>
+				<Icon guid="ImageCatalogGuid" id="PreviewTab"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<Strings>
+					<ButtonText>Preview Makefile</ButtonText>
+					<ToolTipText>Preview file as Makefile in Makefile Reader</ToolTipText>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<KeyBindings>
+		<!-- Ctrl+Alt+1 to open Makefile tool window -->
+		<KeyBinding guid="MakefileReader" id="View_OtherWindows_Makefile_Button_0" 
+					editor="guidVSStd97" key1="1" mod1="Control Alt"/>
+	</KeyBindings>
+
+	<VisibilityConstraints>
+		<!-- Show Preview button for all files in Solution Explorer -->
+		<VisibilityItem guid="MakefileReader" id="Edit_Makefile_Button_0" 
+						context="UICONTEXT_SolutionExistsAndNotBuildingAndNotDebugging"/>
+	</VisibilityConstraints>
+
+	<Symbols>
+		<GuidSymbol name="MakefileReader" value="{d5f00d0c-a5c4-4cba-ab1d-1d7921e4f56e}">
+			<!-- Group IDs -->
+			<IDSymbol name="Edit_Makefile_Group" value="0x0001"/>
+			
+			<!-- Button IDs -->
+			<IDSymbol name="View_OtherWindows_Makefile_Button_0" value="0x0002"/>
+			<IDSymbol name="Edit_Makefile_Button_0" value="0x0003"/>
+		</GuidSymbol>
+	</Symbols>
+
+</CommandTable>

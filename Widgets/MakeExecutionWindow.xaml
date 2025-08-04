@@ -1,0 +1,147 @@
+<Window x:Class="MakefileReader.MakeExecutionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Make Command Execution" 
+        Height="500" Width="700"
+        WindowStartupLocation="CenterOwner"
+        Background="#1e1f29"
+        Icon="{x:Null}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#44475a" Padding="15,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Status Icon -->
+                <Border Grid.Column="0" Background="#bd93f9" CornerRadius="12" Width="24" Height="24" Margin="0,5,10,4">
+                    <TextBlock Text="⚡" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                              Foreground="#282a36" FontWeight="Bold" Height="16" Width="16"/>
+                </Border>
+
+                <!-- Command Info -->
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock x:Name="CommandTextBlock" Text="Make target" FontWeight="Bold" FontSize="14" Foreground="#f8f8f2"/>
+                    <TextBlock x:Name="DirectoryTextBlock" Text="Working directory: C:\path" 
+                              FontSize="11" Foreground="#f8f8f2"/>
+                </StackPanel>
+
+
+            </Grid>
+        </Border>
+
+        <!-- Status Banner -->
+        <Border Grid.Row="1" Name="StatusBanner" Background="#ffb86c" Visibility="Visible">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <!-- Progress Bar at Top -->
+                <ProgressBar Grid.Row="0" Name="ProgressSpinner" 
+                            Height="5" 
+                            IsIndeterminate="True"
+                            Visibility="Visible"
+                            Background="Transparent"
+                            Foreground="#50fa7b"
+                            BorderThickness="0"/>
+                
+                <!-- Status Content -->
+                <Grid Grid.Row="1" Margin="10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Text="🔄" Margin="0,0,8,0" VerticalAlignment="Center" Foreground="#282a36"/>
+                    <TextBlock Grid.Column="1" Name="StatusText" Text="Executing make command..." 
+                              VerticalAlignment="Center" FontWeight="SemiBold" Foreground="#282a36"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <!-- Output Console -->
+        <Border Grid.Row="2" BorderBrush="#6272a4" 
+                BorderThickness="1" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Console Header -->
+                <Border Grid.Row="0" Background="#44475a" 
+                        Padding="10,5">
+                    <TextBlock Text="Output Console" FontWeight="Bold" 
+                              Foreground="#f8f8f2"/>
+                </Border>
+
+                <!-- Console Content -->
+                <TextBox Grid.Row="1" Name="OutputTextBlock" 
+                        VerticalScrollBarVisibility="Auto" 
+                        HorizontalScrollBarVisibility="Auto"
+                        Background="#1e1f29" 
+                        Foreground="#50fa7b" 
+                        FontFamily="Consolas" 
+                        FontSize="12"
+                        TextWrapping="Wrap"
+                        Text="Ready to execute...&#10;"
+                        IsReadOnly="True"
+                        BorderThickness="0"
+                        Padding="10"
+                        AcceptsReturn="True"
+                        VerticalContentAlignment="Top"/>
+            </Grid>
+        </Border>
+
+        <!-- Action Buttons -->
+        <Border Grid.Row="3" Background="#44475a" 
+                Padding="15,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Execution Time -->
+                <TextBlock Grid.Column="0" Name="ExecutionTimeText" 
+                          Text="Execution time: 0s" 
+                          VerticalAlignment="Center"
+                          FontSize="11"
+                          Foreground="#f8f8f2"/>
+
+                <!-- Copy Output Button -->
+                <Button Grid.Column="1" Name="CopyOutputButton" 
+                       Content="Copy Output" 
+                       Padding="15,5" Margin="0,0,10,0"
+                       Click="CopyOutputButton_Click"
+                       Background="#8be9fd" 
+                       Foreground="#282a36"
+                       BorderBrush="#50fa7b"/>
+
+                <!-- Close Button -->
+                <Button Grid.Column="2" Name="CloseButton" 
+                       Content="Close" 
+                       Padding="20,5"
+                       Click="CloseButton_Click"
+                       IsEnabled="False"
+                       Background="#ff5555" 
+                       Foreground="#f8f8f2"
+                       BorderBrush="#ff79c6"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
