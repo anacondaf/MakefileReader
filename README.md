@@ -1,10 +1,37 @@
-# MakefileReader - Visual Studio Extension
-
-![MakefileReader Logo](Resources/Icon.png)
+<h1>
+  <img src="Resources/Icon64.png" alt="MakefileReader Logo" style="vertical-align: middle; height: 64px;">
+  MakefileReader
+</h1>
 
 A powerful Visual Studio extension for reading, parsing, and executing Makefile targets with full argument support. Experience seamless Makefile integration with an intuitive interface, real-time execution tracking, and automatic variable handling.
 
-## 🚀 Features
+## Screen Shots
+
+### Homepage
+
+<div align="center">
+  <img src="blobs/home.png" alt="MakefileReader Extension in Action" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin: 0;">
+  <br>
+  <em></em>
+</div>
+
+### Execute Window
+
+<div align="center">
+  <img src="blobs/execute.png" alt="MakefileReader Extension in Action" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin: 0;">
+  <br>
+  <em></em>
+</div>
+
+### Argument Window
+
+<div align="center">
+  <img src="blobs/arg.png" alt="MakefileReader Extension in Action" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin: 0;">
+  <br>
+  <em></em>
+</div>
+
+## Features
 
 ### 📋 Makefile Tool Window
 - **Dedicated Tool Window**: Clean, organized interface for viewing and managing Makefile targets
