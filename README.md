@@ -1,7 +1,4 @@
-<h1>
-  <img src="Resources/Icon64.png" alt="MakefileReader Logo" style="vertical-align: middle; height: 64px;">
-  MakefileReader
-</h1>
+<h1 style="margin:0">Makefile Reader</h1>
 
 A powerful Visual Studio extension for reading, parsing, and executing Makefile targets with full argument support. Experience seamless Makefile integration with an intuitive interface, real-time execution tracking, and automatic variable handling.
 
