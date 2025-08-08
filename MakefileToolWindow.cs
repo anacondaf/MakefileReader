@@ -9,7 +9,6 @@ namespace MakefileReader;
 /// <summary>
 /// Tool window for displaying and executing Makefile targets
 /// </summary>
-[Guid("4ad2b430-0651-4d2d-8c90-84b8c4b4b8c8")]
 public class MakefileToolWindow : BaseToolWindow<MakefileToolWindow>
 {
     public override string GetTitle(int toolWindowId) => "Makefile Reader";
@@ -22,7 +21,7 @@ public class MakefileToolWindow : BaseToolWindow<MakefileToolWindow>
     }
 
     [Guid("4ad2b430-0651-4d2d-8c90-84b8c4b4b8c8")]
-    internal class Pane : ToolWindowPane
+    public class Pane : ToolWindowPane
     {
         public Pane()
         {
