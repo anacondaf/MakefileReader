@@ -10,11 +10,11 @@ namespace MakefileReader
     {
         public const string Id = "MakefileReader.9f1c63a8-cc87-46d8-bf60-aec085d9f577";
         public const string Name = "MakefileReader";
-        public const string Description = @"Empty VSIX Project.";
+        public const string Description = @"A Visual Studio extension for reading, parsing, and executing Makefile targets with argument fully-supported.";
         public const string Language = "en-US";
         public const string Version = "1.0";
-        public const string Author = "Nguyen Khai";
-        public const string Tags = "";
+        public const string Author = "Kai Nguyen Duc";
+        public const string Tags = "makefile";
         public const bool IsPreview = false;
     }
 }
