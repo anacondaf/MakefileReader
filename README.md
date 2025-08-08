@@ -2,31 +2,7 @@
 
 A powerful Visual Studio extension for reading, parsing, and executing Makefile targets with full argument support. Experience seamless Makefile integration with an intuitive interface, real-time execution tracking, and automatic variable handling.
 
-## Screen Shots
-
-### Homepage
-
-<div align="center">
-  <img src="blobs/home.png" alt="MakefileReader Extension in Action" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin: 0;">
-  <br>
-  <em></em>
-</div>
-
-### Execute Window
-
-<div align="center">
-  <img src="blobs/execute.png" alt="MakefileReader Extension in Action" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin: 0;">
-  <br>
-  <em></em>
-</div>
-
-### Argument Window
-
-<div align="center">
-  <img src="blobs/arg.png" alt="MakefileReader Extension in Action" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin: 0;">
-  <br>
-  <em></em>
-</div>
+![home__1.png](home__1.png)
 
 ## Features
 
@@ -79,12 +55,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [GitHub Repository](https://github.com/your-username/MakefileReader)
 - [Issue Tracker](https://github.com/your-username/MakefileReader/issues)
 - [Documentation](https://github.com/your-username/MakefileReader/wiki)
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. **Check Documentation**: Review this README and the wiki
-2. **Search Issues**: Look through existing GitHub issues
-3. **Create New Issue**: Include Visual Studio version, extension version, and sample Makefile
-4. **Provide Context**: Include error messages, screenshots, and steps to reproduce
