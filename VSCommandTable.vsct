@@ -41,9 +41,10 @@
 	</Commands>
 
 	<KeyBindings>
+		<!-- Ctrl+Alt+M to open Makefile tool window (Global + Text Editor scopes) -->
 		<!-- Ctrl+Alt+1 to open Makefile tool window -->
-		<KeyBinding guid="MakefileReader" id="View_OtherWindows_Makefile_Button_0" 
-					editor="guidVSStd97" key1="1" mod1="Control Alt"/>
+		<KeyBinding guid="MakefileReader" id="View_OtherWindows_Makefile_Button_0"
+					editor="guidVSStd97" key1="M" mod1="Control Alt"/>
 	</KeyBindings>
 
 	<VisibilityConstraints>
